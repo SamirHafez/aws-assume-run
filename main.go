@@ -38,6 +38,7 @@ func main() {
 	cmd.Env = append(os.Environ(), strings.Split(roleCreds, ",")...)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
+	cmd.Stdin = os.Stdin
 
 	err = cmd.Run()
 	must(err)
